@@ -1,0 +1,44 @@
+{
+  "slug": "sri-lanka",
+  "name": "Sri Lanka",
+  "order": 3,
+  "status": "draft",
+  "region": "South Asia",
+  "tagline": "Tea hills, trains and wildlife",
+  "image": {
+    "src": "/assets/img/destination-sri-lanka.jpg",
+    "alt": "Blue train crossing a stone viaduct in Sri Lanka",
+    "width": 480,
+    "height": 360
+  },
+  "price": {
+    "currency": "AUD",
+    "from_now": 460,
+    "was": 920,
+    "per": "person"
+  },
+  "overview": "",
+  "best_time": "Two monsoon seasons mean there is usually good weather somewhere: the south and west coasts are best roughly December to March, and the east coast roughly April to September.",
+  "highlights": [
+    "The Kandy to Ella train ride",
+    "Tea country around Nuwara Eliya",
+    "Sigiriya rock fortress",
+    "Safaris and beaches"
+  ],
+  "good_for": [
+    "Couples",
+    "Adventure travellers",
+    "Families",
+    "Groups"
+  ],
+  "faqs": [],
+  "seo": {
+    "title": "Sri Lanka holidays | Happy Hop Holidays",
+    "description": "Plan a Sri Lanka holiday with Happy Hop Holidays: tea hills, trains and wildlife. Local team on the ground, from AUD 460 per person."
+  },
+  "review": {
+    "approved_by": "",
+    "approved_on": "",
+    "note": "Facts in this file marked draft are general travel knowledge written to get you started. Check them against what you actually offer, then set status to approved."
+  }
+}

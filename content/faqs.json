@@ -1,0 +1,54 @@
+{
+  "_help": "Approved FAQs. Edit wording here. The homepage, landing pages and knowledge.json all read this file. answer_html may contain simple links.",
+  "faqs": [
+    {
+      "id": "deposits-payments",
+      "question": "How do deposits and payments work?",
+      "answer_html": "A deposit secures your booking. The payment schedule is shown with each trip and confirmed in your quote, and the balance is due before you travel. We confirm every payment by email.",
+      "show_on_home": true,
+      "status": "approved"
+    },
+    {
+      "id": "hotel-level",
+      "question": "Can I choose a different hotel level?",
+      "answer_html": "Yes. Our from-prices are based on 4-star hotels, but we can plan 3-star, 5-star and resort stays too, depending on the destination and availability. Tell us what you prefer and we will quote it.",
+      "show_on_home": true,
+      "status": "approved"
+    },
+    {
+      "id": "changes-cancellations",
+      "question": "What if I need to change or cancel?",
+      "answer_html": "Changes and cancellations are not usually accepted, because your hotels and activities are booked and paid for in advance with our partners. If something does come up, tell us as early as you can: any refund depends on the terms of those partners. We strongly recommend travel insurance.",
+      "show_on_home": true,
+      "status": "approved"
+    },
+    {
+      "id": "visas",
+      "question": "Do you handle visas?",
+      "answer_html": "Yes, as a separate service. Visa filing is charged on top of the trip price. We check your documents and file the application for you, for the destinations that need one.",
+      "show_on_home": true,
+      "status": "approved"
+    },
+    {
+      "id": "best-time",
+      "question": "When is the best time to go?",
+      "answer_html": "It depends on the destination. Tell us your dates and we will suggest the best fit, or a better month.",
+      "show_on_home": true,
+      "status": "approved"
+    },
+    {
+      "id": "bali-weddings",
+      "question": "Can you plan a wedding in Bali?",
+      "answer_html": "Yes. We plan the venue, guests' stays and transport. The legal requirements for marrying in Bali are set by the authorities, so we confirm what applies to you when you enquire.",
+      "show_on_home": true,
+      "status": "approved"
+    },
+    {
+      "id": "full-terms",
+      "question": "Where can I read the full terms?",
+      "answer_html": "Our full booking terms are on the <a href=\"/terms/\">Terms &amp; conditions</a> page and are shared with your quote. Ask us if you would like a copy sooner.",
+      "show_on_home": true,
+      "status": "approved"
+    }
+  ]
+}

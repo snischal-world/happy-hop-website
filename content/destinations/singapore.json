@@ -1,0 +1,44 @@
+{
+  "slug": "singapore",
+  "name": "Singapore",
+  "order": 5,
+  "status": "draft",
+  "region": "Southeast Asia",
+  "tagline": "Skyline, gardens and family fun",
+  "image": {
+    "src": "/assets/img/destination-singapore.jpg",
+    "alt": "Merlion fountain and Marina Bay skyline in Singapore",
+    "width": 480,
+    "height": 360
+  },
+  "price": {
+    "currency": "AUD",
+    "from_now": 630,
+    "was": 1260,
+    "per": "person"
+  },
+  "overview": "",
+  "best_time": "Hot and humid all year with short heavy showers. The wettest months are generally November to January.",
+  "highlights": [
+    "Marina Bay and Gardens by the Bay",
+    "Sentosa island",
+    "Hawker centres",
+    "Night Safari and the zoo"
+  ],
+  "good_for": [
+    "Families",
+    "Short stays",
+    "Corporate events",
+    "Stopovers"
+  ],
+  "faqs": [],
+  "seo": {
+    "title": "Singapore holidays | Happy Hop Holidays",
+    "description": "Plan a Singapore holiday with Happy Hop Holidays: skyline, gardens and family fun. Local team on the ground, from AUD 630 per person."
+  },
+  "review": {
+    "approved_by": "",
+    "approved_on": "",
+    "note": "Facts in this file marked draft are general travel knowledge written to get you started. Check them against what you actually offer, then set status to approved."
+  }
+}

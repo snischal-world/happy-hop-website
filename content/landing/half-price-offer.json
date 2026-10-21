@@ -1,0 +1,92 @@
+{
+  "_help": "HOW TO USE: copy this file, rename it (the file name becomes the page address, e.g. my-campaign.json -> /lp/my-campaign/), then change the words. status: draft keeps the page off the live site until you set it to published. indexable: false keeps it out of Google (normal for paid-ad pages). See docs/LANDING_PAGES.md.",
+  "slug": "half-price-offer",
+  "layout": "offer",
+  "status": "published",
+  "indexable": false,
+  "campaign": "half-price-2026",
+  "seo": {
+    "title": "Half price holidays in Asia | Happy Hop Holidays",
+    "description": "Half price on every package to Bali, Vietnam, Sri Lanka, Malaysia, Singapore and Thailand. Book by 31 December 2026 for travel before June 2027."
+  },
+  "hero": {
+    "eyebrow": "Limited time offer",
+    "headline": "Half price on your next holiday in Asia",
+    "headline_emphasis": "Half price",
+    "subhead": "Bali, Vietnam, Sri Lanka, Malaysia, Singapore and Thailand, planned end to end by a local team.",
+    "show_offer": true,
+    "bullets": [
+      "Personal, friendly advice",
+      "Rated 5.0 on Google",
+      "Local team in every destination"
+    ],
+    "image": {
+      "src": "/assets/img/audience-travellers.webp",
+      "alt": "Kangaroo with a suitcase, holding a phone showing a booking confirmed tick",
+      "width": 450,
+      "height": 360,
+      "mult": true
+    },
+    "cta": "Get my free quote"
+  },
+  "form": {
+    "heading": "Get your free quote",
+    "intro": "Tell us a little about your trip and a member of our team will reply with options and rates.",
+    "button": "Get my free quote"
+  },
+  "highlights_heading": "Why book with us",
+  "highlights": [
+    {
+      "title": "Half price, clearly shown",
+      "text": "Every destination shows the original price and the half-price offer side by side."
+    },
+    {
+      "title": "Hop Credit still counts",
+      "text": "If a friend referred you, your Hop Credit can be used together with the half-price offer."
+    },
+    {
+      "title": "The essentials are included",
+      "text": "A 4-star stay (other levels on request), private airport transfers and activities with tickets and transport."
+    },
+    {
+      "title": "A real person plans your trip",
+      "text": "Share a few details and our team replies personally with options and rates."
+    }
+  ],
+  "destinations": [
+    "bali",
+    "vietnam",
+    "sri-lanka",
+    "malaysia",
+    "singapore",
+    "thailand"
+  ],
+  "destinations_heading": "Where would you like to go?",
+  "destinations_lead": "Prices shown are per person and already include the half-price offer.",
+  "steps_heading": "How it works",
+  "steps": [
+    {
+      "title": "Tell us your plans",
+      "text": "Share your destination, rough dates and how many people are travelling."
+    },
+    {
+      "title": "Get your written quote",
+      "text": "We reply with options and the price for your hotels and dates. Website prices are estimates until you have your quote."
+    },
+    {
+      "title": "Secure it with a deposit",
+      "text": "A deposit secures your booking. Flights, visa and insurance are extra."
+    }
+  ],
+  "faqs": [
+    "deposits-payments",
+    "hotel-level",
+    "changes-cancellations",
+    "full-terms"
+  ],
+  "closing": {
+    "heading": "Half price ends 31 December 2026",
+    "text": "Book by then for travel before June 2027.",
+    "button": "Get my free quote"
+  }
+}

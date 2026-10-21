@@ -1,0 +1,92 @@
+{
+  "_help": "HOW TO USE: copy this file, rename it (the file name becomes the page address, e.g. my-campaign.json -> /lp/my-campaign/), then change the words. status: draft keeps the page off the live site until you set it to published. indexable: false keeps it out of Google (normal for paid-ad pages). See docs/LANDING_PAGES.md. This example is a draft: check the sample itinerary matches what you really offer, then set status to published.",
+  "slug": "bali-escape",
+  "layout": "destination",
+  "status": "draft",
+  "indexable": false,
+  "campaign": "bali-escape-2026",
+  "destination": "bali",
+  "seo": {
+    "title": "Bali holidays planned for you | Happy Hop Holidays",
+    "description": "Beaches, temples and rice terraces in Bali, planned end to end by a local team. Get a free quote with half-price pricing for 2026 bookings."
+  },
+  "hero": {
+    "eyebrow": "Bali",
+    "headline": "Your Bali escape, planned for you",
+    "headline_emphasis": "Bali escape",
+    "subhead": "Beaches, temples and rice terraces, with a local team looking after your transfers, stays and experiences.",
+    "show_offer": true,
+    "bullets": [
+      "Private airport transfers",
+      "Local team on the ground",
+      "Hotel level of your choice"
+    ],
+    "image": {
+      "src": "/assets/img/destination-bali.jpg",
+      "alt": "Aerial view of a turquoise bay and cliff on a Bali coast",
+      "width": 480,
+      "height": 360
+    },
+    "cta": "Plan my Bali trip"
+  },
+  "form": {
+    "heading": "Plan your Bali trip",
+    "intro": "Tell us a little about your trip and our team will reply with options and rates.",
+    "interest_default": "Bali",
+    "button": "Get my free quote"
+  },
+  "highlights_heading": "Why book Bali with us",
+  "highlights": [
+    {
+      "title": "Local team in Bali",
+      "text": "Someone on the ground if plans change."
+    },
+    {
+      "title": "Weddings and celebrations",
+      "text": "We also plan weddings, engagements and private celebrations in Bali."
+    },
+    {
+      "title": "Your hotel level",
+      "text": "Our prices are based on 4-star stays, with 3-star, 5-star and resort options on request."
+    }
+  ],
+  "itinerary_heading": "A sample trip",
+  "itinerary": [
+    {
+      "day": "Day 1",
+      "title": "Arrive and settle in",
+      "text": "Private airport transfer to your hotel."
+    },
+    {
+      "day": "Day 2",
+      "title": "Ubud",
+      "text": "Rice terraces, temples and local markets."
+    },
+    {
+      "day": "Day 3",
+      "title": "Free day",
+      "text": "Relax, or add an activity we arrange for you."
+    },
+    {
+      "day": "Day 4",
+      "title": "Uluwatu",
+      "text": "Clifftop temple and a sunset dinner."
+    },
+    {
+      "day": "Day 5",
+      "title": "Depart",
+      "text": "Private transfer to the airport."
+    }
+  ],
+  "faqs": [
+    "deposits-payments",
+    "hotel-level",
+    "bali-weddings",
+    "full-terms"
+  ],
+  "closing": {
+    "heading": "Ready for Bali?",
+    "text": "Tell us your dates and we will plan the rest.",
+    "button": "Plan my Bali trip"
+  }
+}

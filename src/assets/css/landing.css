@@ -1,0 +1,61 @@
+/* Extra styles for campaign landing pages and destination pages.
+   Everything else comes from site.css. */
+.lp-nav .links a.lp-wa{font-weight:600;color:var(--ink)}
+@media(max-width:700px){.lp-nav .links a.lp-wa{display:none}}
+
+.lp-hero{position:relative;padding:40px 0 56px;overflow:hidden}
+.lp-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:start}
+.lp-hero h1{font-size:clamp(2.1rem,4.8vw,3.4rem);margin-bottom:16px}
+.lp-hero h1 em{font-style:normal;background:linear-gradient(100deg,#0aa5cf,#5fd400);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lp-hero .sub{font-size:1.06rem;color:var(--mute);max-width:32em;margin:0 0 22px}
+.lp-hero .sale{margin:0 0 18px}
+.lp-bullets{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px;font-weight:500}
+.lp-bullets li{display:flex;align-items:center;gap:10px;color:var(--mute)}
+.lp-bullets li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--lime),var(--cyan))}
+.lp-hero-img{display:block;width:min(100%,300px);height:auto;margin:22px 0 0}
+.lp-hero-img[src$=".jpg"]{border-radius:24px;width:min(100%,420px);aspect-ratio:4/3;object-fit:cover}
+.lp-hero .formcard{margin:0;max-width:none}
+.lp-hero .formcard h2{font-size:1.7rem}
+.lp-facts{display:grid;gap:12px;margin:22px 0 0}
+.lp-facts div{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:12px 16px}
+.lp-facts dt{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.lp-facts dd{margin:2px 0 0}.lp-facts s{color:#5d6e79}
+@media(max-width:860px){.lp-hero-grid{grid-template-columns:1fr}.lp-hero{padding-top:24px}}
+
+.lp-sec{position:relative;padding:56px 0}
+.lp-sec h2{margin-bottom:12px}
+.lp-sec>.wrap>.lead{margin-bottom:28px}
+.lp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+
+.lp-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.lp-steps li{display:flex;gap:14px;border:1px solid var(--line);border-radius:24px;padding:20px;background:#fff}
+.lp-steps .n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:600}
+.lp-steps h3{font-size:1.1rem;margin-bottom:6px}
+.lp-steps p{margin:0;color:var(--mute);font-size:.94rem}
+
+.lp-itin{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.lp-itin li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:22px;padding:16px 20px;background:#fff}
+.lp-itin .day{flex:none;min-width:64px;background:var(--ink);color:var(--lime);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:6px 10px;border-radius:999px}
+.lp-itin h3{font-size:1.1rem;margin-bottom:4px}.lp-itin p{margin:0;color:var(--mute);font-size:.94rem}
+
+.lp-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;border-radius:30px;padding:28px 32px;background:linear-gradient(100deg,rgba(150,255,1,.34),rgba(18,191,233,.24));border:1px solid rgba(0,36,64,.12)}
+.lp-band h2{font-size:1.6rem;margin:0 0 4px}.lp-band p{margin:0;color:var(--ink)}
+.lp-fine{font-size:.85rem;color:var(--mute);text-align:center;margin:20px 0 0}.lp-fine a{color:#0a7f9c}
+
+.lp-foot{margin-top:0}
+.thanks-wrap{padding:72px 0;text-align:center}
+.thanks-wrap h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:14px}
+.thanks-wrap p{color:var(--mute);max-width:34em;margin:0 auto 12px}
+.thanks-wrap .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+
+/* Slim footer */
+.lp-foot{border-top:1px solid var(--line);padding:30px 0 26px;font-size:.88rem;color:var(--mute);background:radial-gradient(60% 120% at 0 100%,rgba(150,255,1,.16),rgba(255,255,255,0) 60%),radial-gradient(50% 120% at 100% 100%,rgba(18,191,233,.14),rgba(255,255,255,0) 60%)}
+.f-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px}
+.f-row a{text-decoration:none;font-weight:500}.f-row a:hover{color:var(--ink)}
+.f-row div{display:flex;flex-wrap:wrap;gap:6px 20px}
+.lp-nav .btn{white-space:nowrap}
+@media(max-width:520px){.lp-nav{padding:8px 8px 8px 14px;gap:8px}.lp-nav .logo{gap:6px;min-width:0}.lp-nav .wm2 b{font-size:1.02rem}.lp-nav .wm2>span{font-size:.82rem}.lp-nav .logo .cl{width:30px;height:28px}.lp-nav .links .btn{padding:9px 14px;font-size:.85rem}}
+
+/* Tap targets: at least 24px tall (WCAG 2.2 AA) */
+.links a:not(.btn){padding-top:4px;padding-bottom:4px}
+.f-links a,.f-row a{display:inline-block;padding:4px 0}

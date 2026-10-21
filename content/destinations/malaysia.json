@@ -1,0 +1,44 @@
+{
+  "slug": "malaysia",
+  "name": "Malaysia",
+  "order": 4,
+  "status": "draft",
+  "region": "Southeast Asia",
+  "tagline": "Cities, islands and highlands",
+  "image": {
+    "src": "/assets/img/destination-malaysia.jpg",
+    "alt": "Ornate red and gold temple with a dragon staircase in Malaysia",
+    "width": 480,
+    "height": 360
+  },
+  "price": {
+    "currency": "AUD",
+    "from_now": 510,
+    "was": 1020,
+    "per": "person"
+  },
+  "overview": "",
+  "best_time": "Warm and humid all year with regular showers. The east-coast islands are generally best from around March to October.",
+  "highlights": [
+    "Kuala Lumpur skyline and food",
+    "Langkawi islands",
+    "Penang street food and heritage",
+    "Cameron Highlands tea hills"
+  ],
+  "good_for": [
+    "Families",
+    "Food lovers",
+    "Groups",
+    "Couples"
+  ],
+  "faqs": [],
+  "seo": {
+    "title": "Malaysia holidays | Happy Hop Holidays",
+    "description": "Plan a Malaysia holiday with Happy Hop Holidays: cities, islands and highlands. Local team on the ground, from AUD 510 per person."
+  },
+  "review": {
+    "approved_by": "",
+    "approved_on": "",
+    "note": "Facts in this file marked draft are general travel knowledge written to get you started. Check them against what you actually offer, then set status to approved."
+  }
+}

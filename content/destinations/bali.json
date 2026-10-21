@@ -1,0 +1,44 @@
+{
+  "slug": "bali",
+  "name": "Bali",
+  "order": 1,
+  "status": "draft",
+  "region": "Indonesia",
+  "tagline": "Beaches, temples and rice terraces",
+  "image": {
+    "src": "/assets/img/destination-bali.jpg",
+    "alt": "Aerial view of a turquoise bay and cliff on a Bali coast",
+    "width": 480,
+    "height": 360
+  },
+  "price": {
+    "currency": "AUD",
+    "from_now": 420,
+    "was": 840,
+    "per": "person"
+  },
+  "overview": "",
+  "best_time": "The dry season runs roughly April to October. November to March is the wetter season, with warm days and heavier showers.",
+  "highlights": [
+    "Ubud and its rice terraces",
+    "Uluwatu cliffs and temples",
+    "Nusa Penida and Nusa Lembongan day trips",
+    "Beach clubs and sunsets in Seminyak"
+  ],
+  "good_for": [
+    "Honeymoons",
+    "Families",
+    "Weddings and celebrations",
+    "Groups"
+  ],
+  "faqs": [],
+  "seo": {
+    "title": "Bali holidays | Happy Hop Holidays",
+    "description": "Plan a Bali holiday with Happy Hop Holidays: beaches, temples and rice terraces. Local team on the ground, from AUD 420 per person."
+  },
+  "review": {
+    "approved_by": "",
+    "approved_on": "",
+    "note": "Facts in this file marked draft are general travel knowledge written to get you started. Check them against what you actually offer, then set status to approved."
+  }
+}

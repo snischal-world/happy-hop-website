@@ -1,0 +1,44 @@
+{
+  "slug": "thailand",
+  "name": "Thailand",
+  "order": 6,
+  "status": "draft",
+  "region": "Southeast Asia",
+  "tagline": "Islands, temples and nightlife",
+  "image": {
+    "src": "/assets/img/destination-thailand.jpg",
+    "alt": "Golden temple and white chedi in Thailand",
+    "width": 480,
+    "height": 360
+  },
+  "price": {
+    "currency": "AUD",
+    "from_now": 350,
+    "was": 700,
+    "per": "person"
+  },
+  "overview": "",
+  "best_time": "Cooler and drier from around November to February, hot from March to May, and rainy from around June to October.",
+  "highlights": [
+    "Bangkok temples and markets",
+    "Phuket and the Andaman islands",
+    "Chiang Mai and elephant sanctuaries",
+    "Island hopping"
+  ],
+  "good_for": [
+    "Honeymoons",
+    "Groups",
+    "Families",
+    "Friends"
+  ],
+  "faqs": [],
+  "seo": {
+    "title": "Thailand holidays | Happy Hop Holidays",
+    "description": "Plan a Thailand holiday with Happy Hop Holidays: islands, temples and nightlife. Local team on the ground, from AUD 350 per person."
+  },
+  "review": {
+    "approved_by": "",
+    "approved_on": "",
+    "note": "Facts in this file marked draft are general travel knowledge written to get you started. Check them against what you actually offer, then set status to approved."
+  }
+}

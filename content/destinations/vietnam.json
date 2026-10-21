@@ -1,0 +1,44 @@
+{
+  "slug": "vietnam",
+  "name": "Vietnam",
+  "order": 2,
+  "status": "draft",
+  "region": "Southeast Asia",
+  "tagline": "Bays, old towns and street food",
+  "image": {
+    "src": "/assets/img/destination-vietnam.jpg",
+    "alt": "Limestone cliffs and a farmhouse reflected in still water in Vietnam",
+    "width": 480,
+    "height": 360
+  },
+  "price": {
+    "currency": "AUD",
+    "from_now": 480,
+    "was": 960,
+    "per": "person"
+  },
+  "overview": "",
+  "best_time": "Vietnam is long, so the best months differ by region: the north is pleasant in autumn and spring, the central coast is driest from around February to August, and the south is driest from around December to April.",
+  "highlights": [
+    "Hanoi and its old quarter",
+    "Ha Long Bay cruises",
+    "Hoi An lantern streets",
+    "Ho Chi Minh City street food"
+  ],
+  "good_for": [
+    "Food lovers",
+    "Couples",
+    "Groups",
+    "Families"
+  ],
+  "faqs": [],
+  "seo": {
+    "title": "Vietnam holidays | Happy Hop Holidays",
+    "description": "Plan a Vietnam holiday with Happy Hop Holidays: bays, old towns and street food. Local team on the ground, from AUD 480 per person."
+  },
+  "review": {
+    "approved_by": "",
+    "approved_on": "",
+    "note": "Facts in this file marked draft are general travel knowledge written to get you started. Check them against what you actually offer, then set status to approved."
+  }
+}

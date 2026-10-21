@@ -1,0 +1,81 @@
+{
+  "_help": "HOW TO USE: copy this file, rename it (the file name becomes the page address, e.g. my-campaign.json -> /lp/my-campaign/), then change the words. status: draft keeps the page off the live site until you set it to published. indexable: false keeps it out of Google (normal for paid-ad pages). See docs/LANDING_PAGES.md. This example is a draft: check the wording matches what you offer, then set status to published.",
+  "slug": "corporate-events",
+  "layout": "event",
+  "status": "draft",
+  "indexable": false,
+  "campaign": "corporate-events-2026",
+  "seo": {
+    "title": "Corporate events in Asia | Happy Hop Holidays",
+    "description": "Townhalls, rewards retreats, training programmes and company parties in Bali, Vietnam, Sri Lanka, Malaysia, Singapore and Thailand. Ask for a sample programme."
+  },
+  "hero": {
+    "eyebrow": "For companies",
+    "headline": "Corporate events in Asia, planned end to end",
+    "headline_emphasis": "Corporate events",
+    "subhead": "Business events for your team, organised by a local destination team so you can focus on your people.",
+    "bullets": [
+      "Quoted by group size",
+      "Sample programme on request",
+      "Local team in every destination"
+    ],
+    "image": {
+      "src": "/assets/img/trip-corporate.webp",
+      "alt": "Kangaroo in a bow tie holding a trophy",
+      "width": 338,
+      "height": 270,
+      "mult": true
+    },
+    "cta": "Ask for a sample programme"
+  },
+  "form": {
+    "heading": "Ask for a sample programme",
+    "intro": "Tell us about your group and we will send a sample programme and a quote.",
+    "button": "Ask for a sample programme"
+  },
+  "types_heading": "Events we plan",
+  "types_lead": "Choose one, or combine them in a single trip.",
+  "event_types": [
+    {
+      "title": "Annual townhalls",
+      "text": "Bring the whole company together in one place."
+    },
+    {
+      "title": "Rewards and recognition retreats",
+      "text": "Celebrate top performers with a trip they will remember."
+    },
+    {
+      "title": "Training programmes",
+      "text": "Learning sessions and team days away from the office."
+    },
+    {
+      "title": "Company success parties",
+      "text": "Mark a milestone with your team."
+    }
+  ],
+  "steps_heading": "How it works",
+  "steps": [
+    {
+      "title": "Tell us about your group",
+      "text": "Group size, destination ideas and rough dates."
+    },
+    {
+      "title": "Receive a sample programme",
+      "text": "We send an outline and a quote based on your group size."
+    },
+    {
+      "title": "Confirm and relax",
+      "text": "Our local team runs the event on the ground."
+    }
+  ],
+  "faqs": [
+    "deposits-payments",
+    "changes-cancellations",
+    "full-terms"
+  ],
+  "closing": {
+    "heading": "Planning a team event?",
+    "text": "Ask for a sample programme and we will take it from there.",
+    "button": "Ask for a sample programme"
+  }
+}

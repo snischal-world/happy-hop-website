@@ -1,0 +1,109 @@
+{
+  "_help": "Business facts used on every page. Change a value here and the whole site updates the next time it is built. Do not put passwords, API keys or customer data in this file: the repository can be public.",
+  "name": "Happy Hop Holidays",
+  "tagline": "Destination management across Asia and the Pacific.",
+  "abn": "57 594 154 845",
+  "email": "happyhopholidays@gmail.com",
+  "phone_display": "0426 555 995",
+  "phone_e164": "+61426555995",
+  "whatsapp_url": "https://api.whatsapp.com/send?phone=61426555995",
+  "locale": "en_AU",
+  "launched": false,
+  "url": "",
+  "social": {
+    "instagram": "https://www.instagram.com/happyhopholidays/",
+    "facebook": "https://www.facebook.com/happyhopholidays"
+  },
+  "google_reviews_url": "https://g.page/r/CWsdpG74QRxbEBI/",
+  "default_description": "Destination management company for Bali, Vietnam, Sri Lanka, Malaysia, Singapore and Thailand. Tours, honeymoons, group trips, weddings and corporate events.",
+  "og_image": "/og-default.jpg",
+  "og_image_alt": "Happy Hop Holidays logo: a kangaroo in heart sunglasses inside a star",
+  "offer": {
+    "label": "Half price on every package",
+    "detail": "Book by 31 December 2026 for travel before June 2027.",
+    "book_by": "2026-12-31",
+    "travel_before": "2027-06-01",
+    "hop_credit_can_combine": true
+  },
+  "includes": [
+    "A 4-star stay, with other hotel levels on request",
+    "Private airport transfers",
+    "Activities with tickets and transport"
+  ],
+  "price_note": "Flights, visa and insurance are extra, and a deposit secures your booking. Prices are estimates, confirmed in your written quote",
+  "nav": [
+    {
+      "label": "Who we serve",
+      "href": "/#audiences"
+    },
+    {
+      "label": "Trips & events",
+      "href": "/#plan"
+    },
+    {
+      "label": "Destinations",
+      "href": "/#destinations"
+    },
+    {
+      "label": "Services",
+      "href": "/#services"
+    },
+    {
+      "label": "Refer a friend",
+      "href": "/refer/"
+    }
+  ],
+  "nav_legal": [
+    {
+      "label": "Refer a friend",
+      "href": "/refer/"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy/"
+    },
+    {
+      "label": "Terms",
+      "href": "/terms/"
+    }
+  ],
+  "footer_links": [
+    {
+      "label": "Who we serve",
+      "href": "/#audiences"
+    },
+    {
+      "label": "Trips & events",
+      "href": "/#plan"
+    },
+    {
+      "label": "Destinations",
+      "href": "/#destinations"
+    },
+    {
+      "label": "Services",
+      "href": "/#services"
+    },
+    {
+      "label": "Refer a friend",
+      "href": "/refer/"
+    },
+    {
+      "label": "Enquire",
+      "href": "/#enquire"
+    },
+    {
+      "label": "Privacy policy",
+      "href": "/privacy/"
+    },
+    {
+      "label": "Terms & conditions",
+      "href": "/terms/"
+    },
+    {
+      "label": "Referral terms",
+      "href": "/refer/#terms"
+    }
+  ],
+  "consent_text": "I agree that Happy Hop Holidays may contact me about this enquiry by email, phone or WhatsApp."
+}
