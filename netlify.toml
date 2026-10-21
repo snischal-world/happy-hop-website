@@ -1,0 +1,33 @@
+# Netlify settings. Netlify reads this file automatically when you connect the GitHub repo.
+[build]
+  # Copies the public files into a folder called dist and leaves the template out of the live site.
+  # Any new .html page you add to the main folder is published automatically.
+  command = "mkdir -p dist && cp *.html sitemap.xml robots.txt dist/ && rm -f dist/landing-page-template.html"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# Example: a short, memorable campaign link that points at a landing page you created.
+# Remove the # at the start of each line to switch it on.
+# [[redirects]]
+#   from = "/bali"
+#   to = "/bali-offer.html"
+#   status = 301
+
+# Example: send visitors from the www address to the main address (replace the domain).
+# [[redirects]]
+#   from = "https://www.your-domain.com/*"
+#   to = "https://your-domain.com/:splat"
+#   status = 301
+#   force = true
