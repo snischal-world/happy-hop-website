@@ -1,0 +1,14 @@
+{
+  "name": "happy-hop-holidays-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website for Happy Hop Holidays. Static site, no runtime dependencies.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/build.mjs && node scripts/check.mjs"
+  }
+}

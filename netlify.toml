@@ -1,33 +1,71 @@
-# Netlify settings. Netlify reads this file automatically when you connect the GitHub repo.
+# Netlify settings for Happy Hop Holidays.
+# Netlify reads this file automatically, so nothing needs to be typed into the Netlify dashboard
+# for the build. (The dashboard only needs: the connected GitHub repo, the domain, and form notifications.)
+
 [build]
-  # Copies the public files into a folder called dist and leaves the template out of the live site.
-  # Any new .html page you add to the main folder is published automatically.
-  command = "mkdir -p dist && cp *.html sitemap.xml robots.txt dist/ && rm -f dist/landing-page-template.html"
+  command = "node scripts/build.mjs"
   publish = "dist"
 
+[build.environment]
+  NODE_VERSION = "20"
+
+# ---- Security headers on every page --------------------------------------------------------------
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000"
+    # Scripts only from this site. Styles allow Google Fonts. Forms only post to this site.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 
+# ---- Caching: css/js carry a version in the link (?v=...) so they can be cached for a year ---------
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Images are cached for a week. If you replace an image, give the new file a new name.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# The chatbot knowledge file is for software, not for Google.
+[[headers]]
+  for = "/knowledge.json"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Access-Control-Allow-Origin = "*"
+
+# Thank-you page should never appear in search.
+[[headers]]
+  for = "/thanks/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# ---- Old addresses from the preview version keep working -----------------------------------------
 [[redirects]]
-  from = "/index.html"
-  to = "/"
+  from = "/privacy.html"
+  to = "/privacy/"
   status = 301
-  force = true
-
-# Example: a short, memorable campaign link that points at a landing page you created.
-# Remove the # at the start of each line to switch it on.
-# [[redirects]]
-#   from = "/bali"
-#   to = "/bali-offer.html"
-#   status = 301
-
-# Example: send visitors from the www address to the main address (replace the domain).
-# [[redirects]]
-#   from = "https://www.your-domain.com/*"
-#   to = "https://your-domain.com/:splat"
-#   status = 301
-#   force = true
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms/"
+  status = 301
+[[redirects]]
+  from = "/refer.html"
+  to = "/refer/"
+  status = 301

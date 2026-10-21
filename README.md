@@ -1,73 +1,145 @@
 # Happy Hop Holidays website
 
-A simple static website: plain HTML with the CSS inside each page. No build tools, no installs.
+A fast, plain website that is easy to edit with an AI assistant and publishes itself when you save to GitHub.
 
-| File | What it is |
-|---|---|
-| `index.html` | Homepage: destinations, half-price offer, lead form, SEO tags |
-| `landing-page-template.html` | Copy this to make a campaign landing page (same lead form) |
-| `thanks.html` | Page shown after someone sends the form |
-| `netlify.toml` | Netlify build settings, security headers and redirects |
-| `sitemap.xml`, `robots.txt` | Help Google find the right pages |
+- **No frameworks, no installs of libraries.** The only tool needed is Node.js (free).
+- **Text and prices live in simple files** in the `content/` folder. You rarely touch HTML.
+- **Lead forms** (home page and campaign landing pages) are handled by Netlify Forms. No API keys.
+- **Nothing private is stored in this code.** Customer details live only in your Netlify account.
 
-## 1. Edit the site on your computer
+## What is in the folder
 
-1. Install a free editor such as VS Code and open this folder.
-2. Edit the text inside `index.html` (headings, prices in the destination cards, the offer banner).
-3. To preview, double-click `index.html`, or in a terminal in this folder run `python -m http.server 8000` and open http://localhost:8000.
-4. Replace `https://example.com` with your real domain everywhere (VS Code: Edit > Replace in Files). Do the same in `sitemap.xml` and `robots.txt`.
-5. Add a 1200 x 630 picture called `og-image.jpg` to this folder. It is the image shown when the site is shared on Facebook, WhatsApp and LinkedIn.
+| Folder or file | What it is | Do you edit it? |
+|---|---|---|
+| `content/site.json` | Business details, offer wording, menu links, "launched" switch, domain | Yes, often |
+| `content/destinations/*.json` | One file per destination: prices, taglines, best time, highlights | Yes |
+| `content/faqs.json` | The FAQ answers used on the website and by a future chatbot | Yes |
+| `content/landing/*.json` | One file per campaign landing page | Yes |
+| `src/pages/*.html` | Home, privacy, terms, refer-a-friend, thank-you and 404 pages | Sometimes |
+| `src/layouts/` | Page layouts and the shared lead form | Rarely (ask AI) |
+| `src/assets/` | CSS, JavaScript, fonts and images | Images yes, code rarely |
+| `public/` | Favicon, social-share image | Occasionally |
+| `scripts/` | `build.mjs` (makes the site), `dev.mjs` (local preview), `check.mjs` (safety checks) | No |
+| `netlify.toml` | Netlify build settings and security headers | No |
+| `docs/` | Guides: landing pages, chatbot readiness, accounts and costs | Read |
+| `design-source/` | Original logo artwork and the social image source | Keep |
 
-You can ask an AI assistant to make changes. Tell it: "Only edit the HTML text. Do not add any passwords, API keys or customer details to the files."
+## 1. Run it on your computer
 
-## 2. Make a campaign landing page
+1. Install **Node.js 20 or newer** (the "LTS" download at nodejs.org). Check it worked: open a terminal and run `node --version`.
+2. Open a terminal **in this folder** (Windows: open the folder, click the address bar, type `cmd`, press Enter. Mac: right-click the folder, "New Terminal at Folder").
+3. Run `npm run dev`.
+4. Open **http://localhost:8888** in your browser. Leave the terminal open. Press `Ctrl+C` to stop.
 
-1. Copy `landing-page-template.html` and rename the copy, for example `bali-offer.html` (use lowercase and hyphens).
-2. Replace the words in the three areas marked `EDIT 1`, `EDIT 2` and `EDIT 3`.
-3. Search the file for `CAMPAIGN-NAME` and replace it with a short label such as `bali-oct-facebook`. This label arrives with every lead so you know which campaign it came from.
-4. Change the `<title>` and the description in the `<head>`.
-5. Paid-ad pages keep `<meta name="robots" content="noindex">` so they stay out of Google. Delete that line only if you want the page to appear in search, and then add it to `sitemap.xml`.
-6. Add UTM tags to your ad links, for example `https://your-domain.com/bali-offer.html?utm_source=facebook&utm_medium=paid&utm_campaign=bali-oct`. They are saved with each lead automatically.
+The preview rebuilds by itself when you save a file; refresh the browser to see the change. The preview also shows **draft** pages and destinations, so you can review them before they go live.
 
-## 3. Where form answers go, and how to test them
+Other commands: `npm run build` (makes the finished site in `dist/`), `npm run check` (runs the safety checks), `npm test` (both).
 
-The form uses **Netlify Forms**. There is nothing to connect and no key to paste.
+## 2. Edit content
 
-- Each submission is stored privately in your Netlify account: **Site > Forms > lead**. You can download all leads as a CSV for your spreadsheet or CRM.
-- To get an email for every lead: **Site configuration > Notifications > Form submission notifications > Add notification > Email**, and enter `happyhopholidays@gmail.com`.
-- Spam is blocked by a hidden "honeypot" field plus Netlify's own spam filter. Check **Forms > Spam** now and then.
-- Fields saved: name, email, travel interest, other destination, approximate dates, number of travellers, consent (and the exact wording agreed to), the campaign name, the page address and any UTM tags.
+Open the file in any text editor (VS Code is free). Keep the quote marks and commas as they are.
 
-**The form cannot send anything from your computer.** Test it online:
-1. Deploy the site (section 4).
-2. Open the live Netlify address, fill in the form with a test name and your own email, tick the consent box and press the button. You should land on the thank-you page.
-3. In Netlify open **Forms > lead**. Your test appears within a minute. Open it and check every field.
-4. Delete the test entry (Delete submission) so it does not mix with real leads.
-5. A landing page copy must be deployed once before its form is recognised. Test it the same way.
+- **Change a price:** open `content/destinations/bali.json`, change `from_now` (the half-price figure) and `was` (the original). The home page cards and every landing page update.
+- **Change the offer wording or end date:** `content/site.json`, the `offer` block.
+- **Change phone, email, ABN or social links:** `content/site.json`.
+- **Change FAQ answers:** `content/faqs.json` (`answer_html` can contain simple links).
+- **Change page text** (headings, paragraphs): `src/pages/index.html` and the other files in that folder. The text between tags is the words people read.
+- **Replace an image:** put the new file in `src/assets/img/` with a **new file name** (browsers remember old names for a week) and update the name where it is used.
+- **Legal pages:** `src/pages/privacy.html` and `terms.html`. Have a lawyer review any change.
 
-## 4. Put it on GitHub and publish with Netlify
+After editing, run `npm test`. It lists mistakes in plain language (broken links, missing alt text, a form missing its spam guard, a password pasted into a file).
 
-1. Create a free account at github.com and a new **private** repository called `happy-hop-website`.
-2. In a terminal in this folder:
+### Working with an AI assistant
+
+Give it this folder and say: "Read AGENTS.md first." That file tells it the rules (edit content files, never add secrets, run `npm test`). Good requests: "Make a new landing page for a Thailand honeymoon offer", "Change the Bali price to 450", "Add an FAQ about travel insurance".
+
+## 3. Lead forms: where the answers go and how to test
+
+There are two Netlify forms. Both ask for consent to be contacted and both have a hidden spam trap.
+
+| Form name | Where | Fields |
+|---|---|---|
+| `enquiry` | Home page | who you are, name, email, phone, what you are planning (max 3), destination, other destination, travel month, adults, children and ages, message, referral code, consent |
+| `lead` | Every landing page and destination page | name, email, travel interest, other destination, approximate dates, party size, consent, plus hidden `campaign`, `landing_page`, `page_url`, `utm_*` and the exact consent wording |
+
+**Where submissions go:** into your Netlify account at **Project > Forms**. Open a form to read each lead, filter spam, and **Export CSV** for a spreadsheet or CRM. Nothing is stored in GitHub or in the website files.
+
+**Get an email for each lead:** Netlify dashboard > your site > **Project configuration** (called Site configuration on older screens) **> Notifications > Form submission notifications > Add notification > Email notification**. Choose the form (do it once for `enquiry` and once for `lead`) and enter `happyhopholidays@gmail.com`.
+
+**Test on your computer (no Netlify needed):**
+1. Run `npm run dev` and open a landing page, for example http://localhost:8888/lp/half-price-offer/
+2. Fill in the form and send it. You land on the thank-you page.
+3. A copy of the submission is saved in the `.local-submissions/` folder, and the terminal prints it. Check the fields are what you expect, including `campaign`.
+4. Try the spam trap: submissions with the hidden `website` field filled in are ignored.
+5. Delete `.local-submissions/` when you are finished. It is never uploaded to GitHub.
+
+**Test on the real site (needed once before launch, because Netlify only notices forms when it publishes the site):**
+1. Publish to Netlify (section 4).
+2. On the live Netlify address, send a test lead with your own email.
+3. Within a minute it appears in **Forms**, and the email notification arrives. Open it and confirm every field.
+4. Delete the test submission.
+5. After you add a new landing page, send one test lead through it the same way.
+
+**Spam:** the hidden field plus Netlify's built-in filter stop most bots. Check **Forms > Spam** now and then. If spam grows, turn on Netlify's reCAPTCHA option (see docs/ACCOUNTS_AND_COSTS.md).
+
+## 4. Publish with GitHub and Netlify
+
+1. Create a free GitHub account and a **private** repository (for example `happy-hop-holidays`).
+2. In a terminal in this folder, run these once (replace the address with yours):
    ```
    git init
    git add .
    git commit -m "First version"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/happy-hop-website.git
+   git remote add origin https://github.com/YOUR-USERNAME/happy-hop-holidays.git
    git push -u origin main
    ```
-3. Create a free account at netlify.com, then **Add new project > Import an existing project > GitHub**, and choose the repository.
-4. Leave the build settings alone: Netlify reads `netlify.toml`. Press **Deploy**.
-5. After every change, run `git add .`, `git commit -m "What changed"` and `git push`. Netlify republishes in about a minute. Every branch and pull request also gets its own private preview link.
-6. Add your own domain under **Domain management > Add a domain**. Netlify shows the DNS records to enter at your domain provider and then provides the HTTPS certificate for free.
+3. Create a free Netlify account. Choose **Add new project > Import an existing project > GitHub** and pick the repository.
+4. The build settings come from `netlify.toml` (build command `node scripts/build.mjs`, publish folder `dist`, Node 20). Leave them as they are and press **Deploy**.
+5. To change the site later: edit, run `npm test`, then `git add .`, `git commit -m "What I changed"` and `git push`. Netlify publishes within about a minute. If a build fails, the old site stays live.
+6. Every branch and pull request also gets its own private preview link, which is handy for reviewing a new landing page before it goes live.
 
-## Before you collect real leads
+**Landing pages and drafts:** a landing page or destination marked `"status": "draft"` is **not** published. Set it to `"published"` (landing pages) or `"approved"` (destinations) when you are happy.
 
-- Publish a **privacy policy** and **terms** page and link them from the footer and next to the consent tick box. The forms ask for personal details and permission to contact people.
-- Your name, email and phone number are already in the footer. Do not put customer details, passwords or API keys in any file in this repository.
-- Prices on the page are estimates. Keep the wording "confirmed in your written quote" and the detailed price conditions in your terms.
+## 5. Go-live checklist
 
-## Costs (check each site for current prices)
+1. Buy your domain and add it in Netlify: **Domain management > Add a domain**. Follow Netlify's DNS steps. HTTPS is free and automatic.
+2. In `content/site.json` set `"url"` to your domain (for example `"https://happyhopholidays.com.au"`) and `"launched"` to `true`. **Until `launched` is true, the site tells Google not to index it** (robots.txt and a noindex tag), which is what you want while testing.
+3. Run `npm test`, then `git push`.
+4. Open `https://your-domain/sitemap.xml` and `https://your-domain/robots.txt` to confirm they look right.
+5. Create a free **Google Search Console** account, add your domain, and submit `sitemap.xml`.
+6. Send test leads (section 3) and confirm the notification email.
+7. Share the home page link in WhatsApp and Facebook to confirm the preview image and title appear.
+8. Have the privacy policy, terms and the price and offer wording reviewed by a lawyer.
 
-GitHub free plan: $0. Netlify free plan: $0 (it includes a monthly allowance of credits; Netlify's April 2026 notes say form submissions are free on credit plans, and the site pauses if the allowance runs out). A domain: roughly AUD 15 to 30 per year. No other accounts or API keys are needed for this version.
+## 6. Built-in SEO, sharing and accessibility
+
+| Item | Status |
+|---|---|
+| Unique title and description per page, canonical link | Built in (`npm test` warns if too long or short) |
+| Social sharing (Open Graph and Twitter card) with a 1200 x 630 image | Built in (`public/og-default.jpg`); a landing page can use its own image |
+| `sitemap.xml` and `robots.txt` | Generated on every build. Landing pages stay out of the sitemap unless `"indexable": true` |
+| Structured data (TravelAgency, and TouristDestination on destination pages) | Built in |
+| Favicon and phone home-screen icon | Built in |
+| Mobile layout | Tested at 390 px and 1280 px wide with no sideways scrolling |
+| Accessibility basics | Skip link, one H1 per page, labelled form fields, alt text on images, visible keyboard focus, tap targets 24 px or larger, respects reduced-motion settings |
+| Speed | About 120 KB of code in total, images lazy-loaded with set sizes, long caching with automatic cache busting |
+
+**Honest limits:** the checks above are automated tests plus my own browser checks. Before a big ad spend, also run Lighthouse (Chrome > DevTools > Lighthouse) and a free axe or WAVE scan on the live site. Mobile has no hamburger menu: small screens show the logo and the Enquire button only, which suits campaigns. Add a menu later if the site grows.
+
+## 7. Landing pages, chatbot, accounts and costs
+
+- Making campaign pages: **docs/LANDING_PAGES.md**
+- Preparing for a future chatbot: **docs/CHATBOT_READY.md**
+- Accounts, services, keys and costs: **docs/ACCOUNTS_AND_COSTS.md**
+
+## Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `npm: command not found` | Install Node.js, then open a new terminal |
+| Build fails with "Unknown token" or "does not exist" | The message names the file and the typo. Fix it and run `npm test` |
+| Form works locally but nothing appears in Netlify | Forms are detected when the site is published. Check the form name under **Forms**, and that the deploy finished |
+| New landing page not visible online | Its `status` must be `published`; push to GitHub; check the deploy log |
+| Search engines still blocked after launch | `"launched": true` in `content/site.json`, and the deploy must be the production one |
+| Changed an image but the old one shows | Give the new image a new file name |

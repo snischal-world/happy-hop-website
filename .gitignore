@@ -1,6 +1,19 @@
+# Generated files: Netlify rebuilds these on every deploy
 dist/
 node_modules/
+
+# Local test leads. These can contain real people's details: never commit them.
+.local-submissions/
+
+# Secrets and local settings. This site needs none, but keep them out of Git if you ever add one.
 .env
 .env.*
+!.env.example
+*.pem
+*.key
+
+# Editor and system files
 .DS_Store
-setup_site.py
+Thumbs.db
+.idea/
+.vscode/
